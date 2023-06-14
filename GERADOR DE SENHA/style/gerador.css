@@ -1,0 +1,284 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 2em;
+    background-color: whitesmoke;
+}
+body > header > p {
+    color: rgb(63, 62, 62);
+    text-align: center;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    height: 100px;
+    width: 100vw;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.315);
+    transition: all .5s;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1025px;
+    margin: 0 auto;
+}
+#ipassword {
+    width: 70%;
+    height: 50px;
+    margin-left: 20px;
+    border: none;
+    cursor: default;
+    transition: all .5s;
+    font-weight: bold;
+}
+.font.large {
+    font-size: 1.6em;
+}
+.font.small{
+    font-size: .8em;
+}
+.font.medium{
+    font-size: 1em;
+}
+
+
+#ipassword:focus {
+    outline: none;
+}
+h2 {
+    margin: 1.5em 1em;
+}
+.security-indicator {
+    height: 8px;
+    width: 80vw;
+    background-color: #ddd;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin: auto;
+}
+.security-indicator .bar{
+    height: 8px;
+    background-color: #ddd;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+
+
+    transition: all .2s;
+}
+
+.security-indicator .bar.completed {
+    border-top-right-radius: 0;
+}
+.security-indicator .bar.critical {
+    background-color: #eb5757;
+}
+.security-indicator .bar.warning {
+    background-color: #f2c94c;
+}
+.security-indicator .bar.safe {
+    background-color: #27ae68;
+}
+.bar.critical {
+    background-color: #eb5757;
+}
+.bar.warning {
+    background-color: #f2c94c;
+}
+.bar.safe {
+    background-color: #27ae68;
+}
+
+#tam {
+    display: block;
+    margin: 0em 1.5em;
+    color: rgb(94, 93, 93);
+}
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 1000,
+    'GRAD' 0,
+    'opsz' 48;
+    cursor: pointer;
+    margin-right: 15px;
+}
+#ipassword-length {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #ddd;
+    margin: 0em 1.9em;
+    width: 60vw;
+    height: 3px;
+    margin-bottom: 2em;
+    border-radius: 8px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+#ipassword-length:hover{
+    opacity: 1;
+}
+
+#ipassword-length::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+    background-color: #9b51e0;
+    cursor: pointer;
+}
+#ipassword-length::-moz-slider-thumb{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+    background-color: #9b51e0;
+    cursor: pointer;
+}
+#sec1 {
+    width: 100vw;
+}
+
+#sec3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-self: flex-end;
+    margin-right: 55px;
+    color: rgb(34, 33, 33);
+    gap: 8px;
+}
+#sec4 {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    margin-bottom: 4em;
+}
+#copiarsenha{
+    background-color: #a05ddf;
+    color: white;
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    font-size: 0.9em;
+}
+#copiarsenha:active{
+  transform: translate(1%,2%);
+}
+#copiarsenha:hover{
+  outline: 2px solid blueviolet;
+}
+#iMaisculas::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-left: -2px;
+    border: .5px solid rgb(165, 163, 163);
+    user-select:none;
+    transition: all .5s;
+}
+#iMaisculas:checked::before {
+    background-color: #a05ddf;
+    background-image: url('../images/checkedPNG.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#iNumeros::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    margin-left: -2px;
+    border: .5px solid rgb(165, 163, 163);
+    user-select:none;
+    transition: all .5s;
+}
+#iNumeros:checked::before {
+    background-color: #a05ddf;
+    background-image: url('../images/checkedPNG.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+#iSimbolos::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-left: -2px;
+    border: .5px solid rgb(165, 163, 163);
+    user-select:none;
+    transition: all .5s;
+}
+#iSimbolos:checked::before {
+    background-color: #a05ddf;
+    background-image: url('../images/checkedPNG.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media screen and (max-width: 500px){
+    #ipassword-length{
+        width: 40vw;
+    }
+    #ipassword{
+        width: 67%;
+    }
+
+}
+@media screen and (min-width: 1000px){
+   main {
+   border: 1px solid black;
+    width: 1000px;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow:inset  1px 10px #a05ddf;
+   }
+   #sec1 {
+    width: 1000px;
+   }
+   #sec3{
+    width: 1000px;
+   }
+   #sec4{
+    width: 1000px;
+   }
+   #ipassword {
+    width: 600px;
+   }
+   #ipassword-length{
+    width: 800px;
+    }
+    .security-indicator{
+        width: 800px;
+    }
+}
