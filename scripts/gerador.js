@@ -58,7 +58,6 @@ function generatePorcent(){
         SecurityBar.classList.remove("critical")
         SecurityBar.classList.remove("warning")
         SecurityBar.classList.add("safe")
-        SecurityBar.classList.add("completed")
     }
 }
 

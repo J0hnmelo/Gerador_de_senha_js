@@ -79,15 +79,10 @@ h2 {
     background-color: #ddd;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    border-top-right-radius: 8px;
-
-
     transition: all .2s;
 }
 
-.security-indicator .bar.completed {
-    border-top-right-radius: 0;
-}
+
 .security-indicator .bar.critical {
     background-color: #eb5757;
 }
@@ -214,7 +209,6 @@ h2 {
     height: 16px;
     background-color: #ffffff;
     border-radius: 3px;
-    margin-left: -2px;
     border: .5px solid rgb(165, 163, 163);
     user-select:none;
     transition: all .5s;
@@ -234,8 +228,6 @@ h2 {
     height: 16px;
     background-color: #ffffff;
     border-radius: 3px;
-    margin-right: 5px;
-    margin-left: -2px;
     border: .5px solid rgb(165, 163, 163);
     user-select:none;
     transition: all .5s;
@@ -246,6 +238,9 @@ h2 {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.names {
+    margin-left: 5px;
 }
 @media screen and (max-width: 500px){
     #ipassword-length{
